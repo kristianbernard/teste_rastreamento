@@ -1,0 +1,4 @@
+select * from tbconfig where  1=1 
+Log de erro - Data: 07/01/2022 / Hora: 23:22:52 Mensagem: #42S02Table 'dbrastreamento.tbconfig' doesn't exist
+Página: login.aspx
+Usuário: 

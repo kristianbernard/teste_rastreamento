@@ -1,0 +1,186 @@
+﻿body {
+}
+
+
+ .lin{float:left;width:98%;
+padding:8px 0;
+    height: 36px;
+}
+ .rot{float:left;width:144px;
+padding:9px 15px 0 0;font-weight:bold;text-align:right;
+}
+ .val{float:left;width:322px;
+}
+/*.txt{float:left;width:276px;padding:8px 8px 10px;font:14px Arial, Helvetica, sans-serif;color:#080;border:1px solid #e2e4e8; background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0.44, rgb(254,255,250)),
+	color-stop(0.72, rgb(237,240,240))
+);}*/
+.txt:focus{border:1px solid #cbcdd5;background-color:#f8fdf8;background-image:url(img/FunTxtAti.jpg);}
+ .txt.peq{width:155px;}
+ .txt.gra{width:407px;}
+ .txt.cbo{width:294px;}
+ .txt.are{width:407px;max-width:407px;min-width:407px;height:96px;min-height:96px;
+ background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0.44, rgb(254,255,250)),
+	color-stop(0.72, rgb(237,240,240))
+);
+}
+
+/*.prev .rev{float:left;width:100%;margin:15px 0 25px;}
+.prev .rev .lin{float:left;width:100%;border-bottom:1px solid #e2e4e8}
+.prev .rev .lin:hover{border-color:#d5d5d5}
+.prev .rev .lin.cab, .prev .rev .lin.cab:hover{font-weight:bold;border-bottom-width:2px;border-color:#e2e4e8}
+.prev .rev .lin .c{float:left;height:24px;padding:21px 20px 20px 0;text-align:right;line-height:24px;border-right:1px solid #e2e4e8}
+.prev .rev .lin.cab .c{padding-top:15px}
+.prev .rev .lin .btn, .prev .rev .lin .btnD{float:right;margin:-5px -2px 0 0}
+.prev .rev .c.pla{width:110px;text-align:left;font-weight:bold;color:#29791C;text-transform:uppercase;}
+.prev .rev .c.pla h3{float:left;width:auto;margin:-2px 0;padding:0;color:#333;text-transform:none;}
+.prev .rev .c.emp span, .prev .rev .c.lan span{font-size:16px;font-weight:bold;font-style:italic;color:#eda405;}
+.prev .rev .c.emp{width:98px;}
+.prev .rev .c.lan{width:124px;}
+.prev .rev .c.men{width:122px;}
+.prev .rev .c.mai{float:right;padding-right:0;border-right:0}
+.prev .rev .val{float:right;height:32px;margin:-4px 0;line-height:32px;font-weight:bold;font-style:italic;color:#eda405;}
+.prev .rev .val .rea, .prev .rev .val .moe, .prev .rev .val .cen{float:right;height:32px;}
+.prev .rev .val .rea{padding-left:4px;letter-spacing:-2px;font-size:30px;}
+.prev .rev .val .moe, .pind .pla .val .cen{font-size:15px;}
+.prev .rev .val .cen{height:25px;padding-top:8px;line-height:25px;}
+
+*/
+#testenv
+{
+
+    background-color:red;
+    height: 37px;
+    width:694px;
+}
+
+
+   
+   .limpar
+   {clear:both;
+    height: 1px;
+}
+
+#emails
+{width:400px; 
+ float:left; 
+ padding:5px  }
+ 
+ #contatos
+{width:388px; 
+ float:left; 
+  padding:5px
+}
+
+#formaPamento
+{
+
+}
+
+
+.botao
+{border-radius :50px;
+    height: 26px;
+}
+.botao_salvar {
+    background: #CCCCCC url('../img/imgativo.gif') no-repeat fixed left center;
+    border-radius: 10px;
+    width: 150px;
+    height: 35px;
+    }
+
+.botao_voltar {
+    background: #CCCCCC url('../img/icon-voltar.png') no-repeat fixed left center;
+    border-radius: 10px;
+    width: 150px;
+    height: 35px;
+}
+
+.caditens
+{
+}
+
+
+
+
+
+
+.ajax__myTab .ajax__tab_header {
+font-family: verdana,tahoma,helvetica;
+font-size: 11px;
+border-bottom: solid 1px #999999
+}
+
+.ajax__myTab .ajax__tab_outer {
+padding-right: 4px;
+height: 21px;
+background-color: #C0C0C0;
+margin-right: 2px;
+border-right: solid 1px #666666;
+border-top: solid 1px #aaaaaa
+}
+
+.ajax__myTab .ajax__tab_inner {
+padding-left: 3px;
+background-color: #C0C0C0;
+}
+
+.ajax__myTab .ajax__tab_tab {
+height: 13px;
+padding: 4px;
+margin: 0;
+}
+
+.ajax__myTab .ajax__tab_hover .ajax__tab_outer {
+background-color: #cccccc
+}
+
+.ajax__myTab .ajax__tab_hover .ajax__tab_inner {
+background-color: #cccccc
+}
+
+.ajax__myTab .ajax__tab_hover .ajax__tab_tab {}
+
+.ajax__myTab .ajax__tab_active .ajax__tab_outer {
+background-color: #fff;
+border-left: solid 1px #999999;
+}
+
+.ajax__myTab .ajax__tab_active .ajax__tab_inner {
+background-color:#fff;
+}
+
+.ajax__myTab .ajax__tab_active .ajax__tab_tab {}
+
+.ajax__myTab .ajax__tab_body {
+font-family: verdana,tahoma,helvetica;
+font-size: 10pt;
+border: 1px solid #999999;
+border-top: 0;
+padding: 8px;
+background-color: #ffffff;
+}
+
+.btn-hover2 {
+    min-height: 45px;
+    width: 200px;
+    border-radius: 6px;
+    border: 0px;
+    background-color: rgb(9, 184, 62);
+    font-family: Arial, sans-serif;
+    color: rgb(242, 242, 242);
+    font-size: 18px;
+}
+
+    .btn-hover:hover {
+    }
+
+
+

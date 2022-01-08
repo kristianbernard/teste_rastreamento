@@ -1,0 +1,1032 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="restrito_MasterPage" %>
+
+
+<%--' ###############################
+' Alterado por: Kristian Bernard
+' Alterado no dia: 04/08/2021
+' ###############################--%>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head runat="server">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sm Rastreamento</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+     <link href="../css/style.css" rel="stylesheet" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+    <link href="../ninja-slider/thumbnail-slider.css" rel="stylesheet" type="text/css" />
+    <link href="../ninja-slider/ninja-slider.css" rel="stylesheet" type="text/css" />
+    <link href="../ninja-slider/ninja-default.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/restrito/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styleJanelinha.css">
+    <link rel="stylesheet" href="/restrito/bower_components/bootstrap/dist/css/style.css">
+    <link rel="stylesheet" href="/restrito/bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/restrito/bower_components/Ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="/restrito/dist/css/skins/_all-skins.min.css">
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <script src="../js/JScriptmascara.js" type="text/javascript"></script>
+    <script src="/restrito/dist/js/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+
+    <script src="/restrito/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/restrito/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/restrito/dist/js/adminlte.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.5.3/js/bootstrap-colorpicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.5.3/css/bootstrap-colorpicker.min.css" />
+
+    <link rel="stylesheet" href="../bower_components/select2/dist/css/select2.min.css">
+    <script src="bower_components/select2/dist/js/select2.min.js"></script>
+
+    <link rel="stylesheet" href="/restrito/dist/css/AdminLTE.min.css">
+    <link rel="icon" href="../img/favicon.png" type="image/png">
+
+        <%--STICK SLIDER--%>
+    <link rel="stylesheet" type="text/css" href="../slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="../css/styleJanelinha.css" />
+    <link rel="stylesheet" type="text/css" href="../slick/slick-theme.css" />
+
+    <style type="text/css">
+        @font-face {
+            /*     font-family: MyFont; 
+                src:url('fonts/veteran_typewriter.ttf');
+                src: url('fonts/veteran_typewriter.ttf?') format('embedded-opentype'), 
+               url('fonts/veteran_typewriter.ttf') format('woff'), 
+               url('fonts/veteran_typewriter.ttf') format('truetype');  */
+            font-family: MyFontQuadro;
+            src: url('fonts/CoalhandLuke.ttf'); /* this will be applied from IE 9 compatibility mode*/
+            src: url('fonts/CoalhandLuke.ttf?') format('embedded-opentype'), /* IE prior versions */
+            url('fonts/CoalhandLuke.ttf') format('woff'), /* modern browser that support web open font */
+            url('fonts/CoalhandLuke.ttf') format('truetype'); /* browsers that support true type */
+        }
+
+        .LabelUsuario {
+            font-family: MyFont, Arial;
+            color: red;
+            font-size: 24px;
+        }
+
+        .LabelAvisos {
+            font-family: MyFontQuadro, Arial;
+            color: yellow;
+            font-size: 20px;
+        }
+    </style>
+    <style>
+        @keyframes shadow-pulse {
+            0% {
+                box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+            }
+
+            100% {
+                box-shadow: 0 0 0 28px rgba(0, 0, 0, 0);
+            }
+        }
+
+
+
+     
+.brilhar {
+    float: left;
+    width: 35px;
+    height: 35px;
+    font: 17px/35px 'Barlow Semi Condensed', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    background-color: #181B34;
+    /*rgba(30, 144, 255, 0.9);*/
+    border-radius: 50%;
+    animation: shadow-pulse 3s infinite;
+
+}
+
+.bolavermelha {
+    float: left;
+    width: 35px;
+    height: 35px;
+    font: 17px/35px 'Barlow Semi Condensed', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    background-color: red;
+    /*rgba(30, 144, 255, 0.9);*/
+    border-radius: 50%;
+     
+
+}
+.bolatransparente {
+     
+    width: 35px;
+    height: 35px;
+    font: 17px/35px 'Barlow Semi Condensed', sans-serif;
+    text-transform: uppercase;
+    color: black  ;
+    text-align: center;
+    background-color: transparent ;
+    /*rgba(30, 144, 255, 0.9);*/
+    border-radius: 50%;
+     
+
+}
+
+.bolaverde {
+    float: left;
+    width: 35px;
+    height: 35px;
+    font: 17px/35px 'Barlow Semi Condensed', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    background-color: green;
+    /*rgba(30, 144, 255, 0.9);*/
+    border-radius: 50%;
+     
+
+}
+
+.brilharverde {
+    float: left;
+    width: 35px;
+    height: 35px;
+    font: 17px/35px 'Barlow Semi Condensed', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    background-color:  #008000 ;
+    /*rgba(30, 144, 255, 0.9);*/
+    border-radius: 50%;
+    animation: shadow-pulse 3s infinite;
+
+}
+
+.brilharvermelho {
+    float: left;
+    width: 20px;
+    height: 20px;
+    font: 15px/20px 'Barlow Semi Condensed', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    background-color: red;
+    /*rgba(30, 144, 255, 0.9);*/
+    border-radius: 50%;
+    animation: shadow-pulse 3s infinite;
+
+}
+
+.brilharazul {
+    float: right;
+    width: 35px;
+    height: 35px;
+    font: 17px/35px 'Barlow Semi Condensed', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    background-color: cornflowerblue;
+    /*rgba(30, 144, 255, 0.9);*/
+    border-radius: 50%;
+    animation: shadow-pulse 3s infinite;
+
+}
+
+         .brilhartransparente {
+             float: left;
+             width: 35px;
+             height: 35px;
+             font: 17px/35px 'Barlow Semi Condensed', sans-serif;
+             text-transform: uppercase;
+             color: black;
+             text-align: center;
+             background-color: transparent;
+             border-radius: 50%;
+             animation: shadow-pulse 3s infinite;
+         }
+
+
+        .brilhartransparentedireita {
+            float: right;
+            width: 35px;
+            height: 35px;
+            font: 17px/35px 'Barlow Semi Condensed', sans-serif;
+            text-transform: uppercase;
+            color: black;
+            text-align: center;
+            background-color: transparent;
+            border-radius: 50%;
+            animation: shadow-pulse 3s infinite;
+        }
+    </style>
+    <style>
+        .imagemperfil {
+            border-radius: 50%;
+            border: solid;
+            border-width: 0.5rem;
+            border-color: #990033;
+            width: 10rem;
+            height: 10rem;
+            -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+            -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+            -webkit-animation-delay: 2s; /* Safari 4.0 - 8.0 */
+            animation-name: example;
+            animation-duration: 4s;
+            animation-delay: 2s;
+        }
+
+        @-webkit-keyframes example {
+            0% {
+                border-top-color: green;
+                border-bottom-color: green;
+                border-left-color: yellow;
+                border-right-color: yellow;
+            }
+
+            25% {
+                border-top-color: blue;
+                border-bottom-color: blue;
+                border-left-color: #990033;
+                border-right-color: #990033;
+            }
+
+            50% {
+                /*border-color: blue;*/
+                border-top-color: #990033;
+                border-bottom-color: #990033;
+                border-left-color: green;
+                border-right-color: green;
+            }
+
+            75% {
+                border-color: green;
+            }
+
+            100% {
+                border-color: red;
+            }
+        }
+
+        @keyframes example {
+            0% {
+                border-top-color: green;
+                border-bottom-color: green;
+                border-left-color: yellow;
+                border-right-color: yellow;
+            }
+
+            25% {
+                border-top-color: blue;
+                border-bottom-color: blue;
+                border-left-color: #990033;
+                border-right-color: #990033;
+            }
+
+            50% {
+                /*border-color: blue;*/
+                border-top-color: #990033;
+                border-bottom-color: #990033;
+                border-left-color: green;
+                border-right-color: green;
+            }
+
+            75% {
+                border-top-color: green;
+                border-bottom-color: green;
+                border-left-color: red;
+                border-right-color: red;
+            }
+
+            85% {
+                border-top-color: red;
+                border-bottom-color: red;
+                border-left-color: black;
+                border-right-color: black;
+            }
+
+            100% {
+                border-top-color: gold;
+                border-bottom-color: gold;
+                border-left-color: lightgray;
+                border-right-color: lightgray;
+            }
+        }
+
+        .imagemperfil:hover {
+            border-radius: 50%;
+            border: solid;
+            border-width: 0.5rem;
+            border-color: #990033;
+            animation: gira 2s linear infinite;
+        }
+
+        @keyframes gira {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <style>
+        .content-programas {
+            background-color: #003366;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            color: #dcdcdc;
+        }
+
+        .bloco-programas {
+            border: 1px solid #c1c1c1;
+            padding: 2em 2em;
+            background-color: #003366;
+            -webkit-transition: all 200ms ease-in;
+            -webkit-transform: scale(1);
+            -ms-transition: all 200ms ease-in;
+            -ms-transform: scale(1);
+            -moz-transition: all 200ms ease-in;
+            -moz-transform: scale(1);
+            transition: all 200ms ease-in;
+            transform: scale(1);
+        }
+
+            .bloco-programas a {
+                display: none;
+            }
+
+            .bloco-programas:hover {
+                box-shadow: 0px 0px 90px #000000;
+                z-index: 2;
+                -webkit-transition: all 200ms ease-in;
+                -webkit-transform: scale(1.1);
+                -ms-transition: all 200ms ease-in;
+                -ms-transform: scale(1.1);
+                -moz-transition: all 200ms ease-in;
+                -moz-transform: scale(1.1);
+                transition: all 200ms ease-in;
+                transform: scale(1.1);
+            }
+
+                .bloco-programas:hover a {
+                    display: block;
+                }
+    </style>
+    <style>
+        .content-graficos {
+            background-color: transparent;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            color: #dcdcdc;
+        }
+
+        .bloco-graficos {
+            /*border: 1px solid #c1c1c1;*/
+            padding: 2em 2em;
+            background-color: transparent;
+            -webkit-transition: all 200ms ease-in;
+            -webkit-transform: scale(1);
+            -ms-transition: all 200ms ease-in;
+            -ms-transform: scale(1);
+            -moz-transition: all 200ms ease-in;
+            -moz-transform: scale(1);
+            transition: all 200ms ease-in;
+            transform: scale(1);
+        }
+
+            .bloco-graficos a {
+                display: none;
+            }
+
+            .bloco-graficos:hover {
+                box-shadow: 0px 0px 90px #000000;
+                z-index: 2;
+                -webkit-transition: all 200ms ease-in;
+                -webkit-transform: scale(1.1);
+                -ms-transition: all 200ms ease-in;
+                -ms-transform: scale(1.1);
+                -moz-transition: all 200ms ease-in;
+                -moz-transform: scale(1.1);
+                transition: all 200ms ease-in;
+                transform: scale(1.1);
+            }
+
+                .bloco-graficos:hover a {
+                    display: block;
+                }
+    </style>
+    <style>
+          .label-fundoredondo-sem-sombra {
+            padding:0.9rem;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+  
+    border: none;
+  
+     
+}
+        .label-fundoredondo {
+            margin-left :0rem;
+           /* margin-top  :10rem;
+            margin-bottom   :10rem;*/
+            padding:0.9rem;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+  
+    border: none;
+  -webkit-box-shadow: 0px 0px 18px 0px rgba(50, 50, 50, 0.75); text-align: center; -moz-box-shadow: 0px 0px 18px 0px rgba(50, 50, 50, 0.75); box-shadow: 0px 0px 18px 0px rgba(50, 50, 50, 0.75);
+     
+}
+        .img-fundoredondo {
+            margin-left: 0rem;
+            /* margin-top  :10rem;
+            margin-bottom   :10rem;*/
+            padding: 0.9rem;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            border: none;
+            -webkit-box-shadow: 0px 0px 18px 0px rgba(50, 50, 50, 0.75);
+            text-align: center;
+            -moz-box-shadow: 0px 0px 18px 0px rgba(50, 50, 50, 0.75);
+            box-shadow: 0px 0px 18px 0px rgba(50, 50, 50, 0.75);
+        }
+     
+        .btnlegal {
+   
+  cursor: pointer;
+  /*background: transparent;*/
+  border: 1px solid #91C9FF;
+  outline: none;
+  transition: 1s ease-in-out;
+}
+     
+svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+  stroke: #fff;
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: 1s ease-in-out;
+}
+
+.btnlegal:hover {
+  transition: 1s ease-in-out;
+  background: #181B34;
+  color:white;
+    box-shadow: 0px 0px 90px #000000;
+                z-index: 2;
+                -webkit-transition: all 200ms ease-in;
+                -webkit-transform: scale(1.2);
+                -ms-transition: all 200ms ease-in;
+                -ms-transform: scale(1.2);
+                -moz-transition: all 200ms ease-in;
+                -moz-transform: scale(1.2);
+                transition: all 200ms ease-in;
+                transform: scale(1.2);
+
+}
+btnlegal:visited  {
+  transition: 1s ease-in-out;
+  background: green;
+    box-shadow: 0px 0px 90px #000000;
+                z-index: 2;
+                -webkit-transition: all 200ms ease-in;
+                -webkit-transform: scale(0.8);
+                -ms-transition: all 200ms ease-in;
+                -ms-transform: scale(0.8);
+                -moz-transition: all 200ms ease-in;
+                -moz-transform: scale(0.8);
+                transition: all 200ms ease-in;
+                transform: scale(0.8);
+
+} 
+    </style>
+    <style>
+        .content-imagens {
+            background-color: transparent;
+            /*padding-top: 50px;
+  padding-bottom: 50px;
+  color: #dcdcdc;*/
+        }
+
+        .bloco-imagens {
+            /*border: 1px solid #c1c1c1;*/
+            /*padding: 2em 2em;*/
+            background-color: transparent;
+            -webkit-transition: all 200ms ease-in;
+            -webkit-transform: scale(1);
+            -ms-transition: all 200ms ease-in;
+            -ms-transform: scale(1);
+            -moz-transition: all 200ms ease-in;
+            -moz-transform: scale(1);
+            transition: all 200ms ease-in;
+            transform: scale(1);
+        }
+
+            .bloco-imagens a {
+            }
+
+            .bloco-imagens:hover {
+                /*box-shadow: 0px 0px 90px #000000;*/
+                z-index: 2;
+                -webkit-transition: all 200ms ease-in;
+                -webkit-transform: scale(1.8);
+                -ms-transition: all 200ms ease-in;
+                -ms-transform: scale(1.8);
+                -moz-transition: all 200ms ease-in;
+                -moz-transform: scale(1.8);
+                transition: all 200ms ease-in;
+                transform: scale(1.8);
+            }
+
+                .bloco-imagens:hover a {
+                    /*display:block;*/
+                }
+    </style>
+
+    <style>
+        .content-imagens {
+            background-color: transparent;
+            /*padding-top: 50px;
+  padding-bottom: 50px;
+  color: #dcdcdc;*/
+        }
+
+        .bloco-imagensbtn {
+            /*border: 1px solid #c1c1c1;*/
+            /*padding: 2em 2em;*/
+            background-color: transparent;
+            -webkit-transition: all 200ms ease-in;
+            -webkit-transform: scale(1);
+            -ms-transition: all 200ms ease-in;
+            -ms-transform: scale(1);
+            -moz-transition: all 200ms ease-in;
+            -moz-transform: scale(1);
+            transition: all 200ms ease-in;
+            transform: scale(1);
+        }
+
+            .bloco-imagensbtn a {
+                display: none;
+            }
+
+            .bloco-imagensbtn:hover {
+                background: transparent;
+                box-shadow: 0px 0px 90px rgba(50, 50, 50, 0.77);
+                z-index: 2;
+                -webkit-transition: all 200ms ease-in;
+                -webkit-transform: scale(1.8);
+                -ms-transition: all 200ms ease-in;
+                -ms-transform: scale(1.8);
+                -moz-transition: all 200ms ease-in;
+                -moz-transform: scale(1.8);
+                transition: all 200ms ease-in;
+                transform: scale(1.8);
+            }
+
+                .bloco-imagensbtn:hover a {
+                    display: block;
+                }
+    </style>
+    <style>
+        .content-grafgeral {
+            background-color: transparent;
+            /*padding-top: 50px;
+  padding-bottom: 50px;
+  color: #dcdcdc;*/
+        }
+
+        .bloco-grafgeral {
+            /*border: 1px solid #c1c1c1;*/
+            /*padding: 2em 2em;*/
+            background-color: transparent;
+            -webkit-transition: all 200ms ease-in;
+            -webkit-transform: scale(1);
+            -ms-transition: all 200ms ease-in;
+            -ms-transform: scale(1);
+            -moz-transition: all 200ms ease-in;
+            -moz-transform: scale(1);
+            transition: all 200ms ease-in;
+            transform: scale(1);
+        }
+
+            .bloco-grafgeral a {
+                display: none;
+            }
+
+            .bloco-grafgeral:hover {
+                /*box-shadow: 0px 0px 90px #000000;*/
+                z-index: 2;
+                -webkit-transition: all 200ms ease-in;
+                -webkit-transform: scale(1.1);
+                -ms-transition: all 200ms ease-in;
+                -ms-transform: scale(1.1);
+                -moz-transition: all 200ms ease-in;
+                -moz-transform: scale(1.1);
+                transition: all 200ms ease-in;
+                transform: scale(1.1);
+            }
+
+                .bloco-grafgeral:hover a {
+                    display: block;
+                }
+    </style>
+    <style type="text/css">
+        @font-face {
+            /*     font-family: MyFont; 
+                src:url('fonts/veteran_typewriter.ttf');
+                src: url('fonts/veteran_typewriter.ttf?') format('embedded-opentype'), 
+               url('fonts/veteran_typewriter.ttf') format('woff'), 
+               url('fonts/veteran_typewriter.ttf') format('truetype');  */
+            font-family: MyFontQuadro;
+            src: url('fonts/CoalhandLuke.ttf'); /* this will be applied from IE 9 compatibility mode*/
+            src: url('fonts/CoalhandLuke.ttf?') format('embedded-opentype'), /* IE prior versions */
+            url('fonts/CoalhandLuke.ttf') format('woff'), /* modern browser that support web open font */
+            url('fonts/CoalhandLuke.ttf') format('truetype'); /* browsers that support true type */
+        }
+
+        .LabelUsuario {
+            font-family: MyFont, Arial;
+            color: red;
+            font-size: 24px;
+        }
+
+        .LabelAvisos {
+            font-family: MyFontQuadro, Arial;
+            color: yellow;
+            font-size: 20px;
+        }
+    </style>
+    <style>
+        .imagemperfil {
+            border-radius: 50%;
+            border: solid;
+            border-width: 0.5rem;
+            border-color: #990033;
+            width: 10rem;
+            height: 10rem;
+            -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+            -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+            -webkit-animation-delay: 2s; /* Safari 4.0 - 8.0 */
+            animation-name: example;
+            animation-duration: 4s;
+            animation-delay: 2s;
+        }
+
+        @-webkit-keyframes example {
+            0% {
+                border-color: white;
+            }
+
+            25% {
+                border-color: yellow;
+            }
+
+            50% {
+                border-color: blue;
+            }
+
+            75% {
+                border-color: green;
+            }
+
+            100% {
+                border-color: red;
+            }
+        }
+
+        @keyframes example {
+            0% {
+                border-color: white;
+            }
+
+            25% {
+                border-color: yellow;
+            }
+
+            50% {
+                border-color: blue;
+            }
+
+            75% {
+                border-color: green;
+            }
+
+            100% {
+                border-color: red;
+            }
+        }
+
+        .imagemperfil:hover {
+            border-radius: 50%;
+            border: solid;
+            border-width: 0.5rem;
+            border-color: #990033;
+            animation: gira 2s linear infinite;
+        }
+
+        @keyframes gira {
+            to {
+                transform: rotate(360deg);
+            }
+    </style>
+    <style>
+        #swal2-content {
+            font-size: 12pt;
+        }
+    </style>
+    <script language="javascript" type="text/javascript">
+        function irtopo() {
+
+
+
+            //$("html, body").animate({
+            //    scrollTop: $($.attr(this, '#inicio')).offset().top
+            //}, 1200);
+
+            $("html, body").animate({
+                scrollTop: 0
+            }, 1200);
+            $("html, body").animate({
+                scrollTop: 0
+            }, 1200);
+
+        }
+    </script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body class="hold-transition skin-blue-light sidebar-mini">
+    <form id="form1" runat="server" enctype="MULTIPART/FORM-DATA">
+
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+        <div class="wrapper">
+
+            <!-- Main Header -->
+            <header class="main-header" runat="server" >
+
+                <!-- Logo -->
+                <a class="logo">
+
+                    <%--<span class="logo-mini"><b></b></span>--%>
+                    <span class="logo-lg"><b>Rastreamento</b> </span>
+                </a>
+
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                        <span class="sr-only">Toggle navigation</span>
+                    </a>
+                    <div class="navbar-custom-menu">
+                        <ul class="nav navbar-nav">
+
+                            
+                                
+
+
+                               
+
+                            <li class="dropdown user user-menu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+                                        <ContentTemplate>
+                                            <asp:Image ID="imgperfilfixo" runat="server" ImageUrl="~/img/semimagem01.png" ClientIDMode="static" class="user-image" alt="user-image"></asp:Image>
+
+                                            <span class="hidden-xs">
+                                                <asp:Label ID="lblusuario" runat="server" Text="Label"></asp:Label></span>
+                                        </ContentTemplate>
+                                    </asp:UpdatePanel>
+                                </a> 
+                            
+
+
+                            <li>
+                                <a href="/login.aspx" onclick="sair()" data-toggle="tooltip" data-placement="bottom" title="Sair"><i class="fa fa-sign-out"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+
+            <aside class="main-sidebar">
+
+                <section class="sidebar">
+
+
+                    <!-- Sidebar Menu -->
+                    <ul class="sidebar-menu" data-widget="tree">
+                        <div class="row">
+
+                            <div class="col-lg-12 col-sm-12 ">
+                                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                                    <ContentTemplate>
+                                        <br />
+                                        <div class="row">
+                                            <div class="col-md-2"></div>
+
+
+                                        </div>
+
+
+                                    </ContentTemplate>
+                                </asp:UpdatePanel>
+                            </div>
+                        </div>
+                        <center>
+
+                            <div class="bloco-imagens ">
+                                <br />
+                               
+                                </div>
+                              </center>
+                        <div class="row">
+                            <div class="col-lg-1 col-sm-1  "></div>
+                            <div class="col-lg-10 col-sm-1 ">
+                                <hr style="border-color: lightsteelblue" />
+                            </div>
+                        </div>
+                        <li>
+                            <a href="relatoriolog.aspx"><i class="fa fa-home"></i><span>HOME</span></a></li>
+                        <li class="treeview">
+                            <a href="#"><i class="fa fa-folder"></i><span>Cadastros</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu"> 
+                                <li runat="server"><a href="permissoes.aspx">Permissões de Acesso</a></li> 
+                                <li runat="server"><a href="usuarios.aspx">Usuários</a></li>
+                            
+                            </ul>
+                        </li>
+                          
+
+                    </ul>
+                </section>
+            </aside>
+
+            <div class="content-wrapper">
+                <section class="content container-fluid">
+                     
+
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+
+
+
+
+                </section>
+            </div>
+
+           <footer class="main-footer text-center">
+                <div class="pull-right hidden-xs">
+                </div> 
+            </footer>
+
+
+        </div>
+
+        <%--<script src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js'></script>--%>
+         <%--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>--%>
+        <script src="../slick/slick.js" type="text/javascript" charset="utf-8"></script>
+
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script>
+        $(".lazy").slick({
+            lazyLoad: 'ondemand',
+            dots: true,
+            loop: true,
+            autoplay: true,
+            infinite: true,
+            autoplayHoverPause: false,
+            speed: 500,
+            fade: true,
+            cssEase: 'linear'
+        });
+        $(".regular").slick({
+            dots: true,
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 3,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        //arrows: false,
+                        centerMode: true,
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        //arrows: false,
+                        centerMode: true,
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+        $(".center2").slick({
+            dots: true,
+            infinite: true,
+            centerMode: true,
+            autoplay: true,
+            slidesToShow: 5,
+            slidesToScroll: 5,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        //arrows: false,
+                        centerMode: true,
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        //arrows: false,
+                        centerMode: true,
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+        $(".center").slick({
+            dots: true,
+            infinite: true,
+            centerMode: true,
+            autoplay: true,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        //arrows: false,
+                        centerMode: true,
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        //arrows: false,
+                        centerMode: true,
+                        slidesToShow: 1
+                    }
+                }
+            ]
+
+        });
+
+    </script>
+
+
+        <script>
+            $(document).ready(function () {
+                $('[data-toggle="tooltip"]').tooltip();
+            });
+            window.onload = function () {
+                var d = new Date();
+                var n = d.getFullYear();
+                document.getElementById("ano").innerHTML = n;
+            };
+            function sair() {
+                document.cookie = "smrestrito=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            }
+        </script>
+
+        <script language="javascript" type="text/javascript">
+            function irtopo() {
+
+                $("html, body").animate({
+                    scrollTop: 0
+                }, 1200);
+
+
+            }
+        </script>
+
+
+        <script>
+            $('.owl-inicial').owlCarousel({
+                loop: true,
+                margin: 10,
+                items: 5,
+                autoplay: true,
+                autoplayTimeout: 6000,
+                smartSpeed: 2500,
+                autoplayHoverPause: true,
+                nav: true,
+
+            })
+        </script>
+
+    </form>
+</body>
+</html>

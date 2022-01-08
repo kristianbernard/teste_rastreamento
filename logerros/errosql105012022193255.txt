@@ -1,0 +1,5 @@
+select * from tbconfig where  1=1 
+Log de erro - Data: 05/01/2022 / Hora: 19:32:55 Mensagem: #42000Unknown database 'dbshopping'
+Resultado notificação por e-mail E-mail não enviado !
+Página: login.aspx
+Usuário: 

@@ -1,0 +1,46 @@
+﻿
+
+&:before {
+    box-sizing: border-box;
+    margin: -$bubble-r;
+    border: solid $bubble-r #e2264d;
+    width: $bubble-d;
+    height: $bubble-d;
+    transform: scale(0);
+}
+
+&:after {
+    margin: -$sparkle-r;
+    width: $sparkle-d;
+    height: $sparkle-d;
+    @include sparkles(1);
+}
+
+}
+
+@keyframes heart {
+    0%, 17.5% {
+        font-size: 0;
+    }
+}
+
+@keyframes bubble {
+    15% {
+        @include bubble($bubble-r);
+    }
+
+    30%, 100% {
+        @include bubble(0);
+    }
+}
+
+@keyframes sparkles {
+    0%, 20% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 1;
+        @include sparkles(0);
+    }
+}

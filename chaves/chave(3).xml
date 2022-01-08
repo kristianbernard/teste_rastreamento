@@ -1,0 +1,32 @@
+<Rastreamento>
+  <chave>
+    <nrseq>166</nrseq>
+    <servidor>dbrastreamento.mysql.database.azure.com</servidor>
+    <usuario>azadmin</usuario>
+    <senha>Kr@@02112001</senha>
+    <banco>dbrastreamento</banco>
+    <descricao>smhoppings</descricao>
+    <dtultimacopia>
+    </dtultimacopia>
+    <provedor>
+    </provedor>
+    <padraomysql>1</padraomysql>
+    <grupo>Victor</grupo>
+    <ativo>1</ativo>
+    <usercad>
+    </usercad>
+    <dtexclui>
+    </dtexclui>
+    <userexclui>
+    </userexclui>
+    <nrseqctrl>
+    </nrseqctrl>
+    <dtcad>
+    </dtcad>
+    <tipo>
+    </tipo>
+    <nrseqhosp>
+    </nrseqhosp>
+    <producao>0</producao>
+  </chave>
+</Rastreamento>
